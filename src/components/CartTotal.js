@@ -8,7 +8,7 @@ class CartTotal extends Component {
 
     return (
       <button type="button" className="btn btn-primary">
-        Total:  <span className="badge badge-light">${total}</span>
+        Total:  <span className="badge badge-light">${Math.round(100*total)/100}</span>
       </button>
     );
   }

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Card, CardImg, CardText, CardBody, CardLink,
+  Card, CardBody, CardLink,
   CardTitle, CardSubtitle
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
+import '../App.css'
 
 class Item extends Component {
 
@@ -13,7 +15,8 @@ class Item extends Component {
 
     return (
       <div>
-        <Card>
+        <Link to={`/${id}`} style={{ textDecoration: 'none'}}>
+        <Card className='CardLink'>
           <CardBody>
             <CardTitle><h1>{name}</h1> ${price}</CardTitle>
             <CardSubtitle>{description}</CardSubtitle>
@@ -24,6 +27,7 @@ class Item extends Component {
             <CardLink onClick={() => removeItem(id)}><i style={{ fontSize: '40px' }} className="text-danger fas fa-cart-arrow-down"></i></CardLink>
           </CardBody>
         </Card>
+        </Link>
       </div>
     );
   }

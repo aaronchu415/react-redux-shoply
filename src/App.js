@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
-import ShoppingListContainer from './container/ShoppingListContainer';
+import Routes from '../src/components/Routes'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
-    <ShoppingListContainer />
+    <div>
+      <NavBar/>
+      <Routes/>
+    </div>
   );
 }
 

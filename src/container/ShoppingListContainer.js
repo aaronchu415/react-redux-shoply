@@ -3,7 +3,6 @@ import ShoppingList from '../components/ShoppingList';
 
 
 function mapStateToProps(state) {
-  console.log('asfsfa', state)
   return {
     products: state.products
   };
